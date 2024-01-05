@@ -175,8 +175,8 @@ li {
 .figcaption__title {
   margin-bottom: 20px;
 }
-.figcaption__highlight {
-  font-weight: 700;
+.figcaption__title-highlight {
+  font-weight: 600;
 }
 .figcaption__description {
   margin-bottom: 67px;
