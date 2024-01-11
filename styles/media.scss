@@ -1,24 +1,58 @@
 @media screen and (max-width: 800px) {
-    nav ul {
-        pointer-events: none;
-        opacity: 0;
-        margin-left: 40px;
-    }
-    .header__list-element:not(:first-of-type) {
-        margin-left: 10px;
-    }
-    .header__checkbox:checked ~ nav ul {
-        opacity: 1;
-        transition: opacity 3s;
-        pointer-events: auto;
-    }
-    .main-section__figure img {
-        display: none;
-    }
-    a {
-        font-size: 14px;
-    }
     .header {
+        &__checkbox {
+            display: none;
+        }
+        &__checkbox:checked ~ &__label {
+            transform: rotate(-45deg);
+            width: 0;
+        }
+        &__checkbox:checked ~ &__label:before {
+            animation: burgerTop 0.5s linear forwards;
+        }
+        &__checkbox:checked ~ &__label:after {
+            animation: burgerBottom 0.5s linear forwards;
+        }
+        &__checkbox:checked ~ &__label {
+            left: 10px;
+            top: 13px;
+        }
+        &__label span {
+            width: 3em;
+            height: 3em;
+            display: block;
+            position: relative;
+            bottom: 20px;
+        }
+        &__label,
+        &__label::before,
+        &__label::after {
+            height: 2px;
+            width: 2em;
+            display: none;
+            background-color: black;
+            position: relative;
+            cursor: pointer;
+        }
+        &__label {
+            left: 3px;
+        }
+        &__label::before {
+            bottom: 6px;
+            content: "";
+            height: 2px;
+            width: 3em;
+            background-color: black;
+            position: absolute;
+        }
+        &__label::after {
+            top: 6px;
+            content: "";
+            height: 2px;
+            width: 1em;
+            background-color: black;
+            position: absolute;
+        }
         &__login-btn {
             display: none;
         }
@@ -37,5 +71,25 @@
         &__checkbox:checked ~ &__logo {
             display: none;
         }
+        &__list-element:not(:first-of-type) {
+            margin-left: 10px;
+        }
+        &__checkbox:checked ~ nav ul {
+            opacity: 1;
+            transition: opacity 3s;
+            pointer-events: auto;
+        }
+        
+    }
+    nav ul {
+        pointer-events: none;
+        opacity: 0;
+        margin-left: 40px;
+    }
+    .main-section__figure img {
+        display: none;
+    }
+    a {
+        font-size: 14px;
     }
 }

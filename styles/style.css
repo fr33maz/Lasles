@@ -150,52 +150,8 @@ li {
 .header__checkbox {
   display: none;
 }
-.header__checkbox:checked ~ .header__label {
-  transform: rotate(-45deg);
-  width: 0;
-}
-.header__checkbox:checked ~ .header__label:before {
-  animation: burgerTop 0.5s linear forwards;
-}
-.header__checkbox:checked ~ .header__label:after {
-  animation: burgerBottom 0.5s linear forwards;
-}
-.header__checkbox:checked ~ .header__label {
-  left: 10px;
-  top: 13px;
-}
-.header__label span {
-  width: 3em;
-  height: 3em;
-  display: block;
-  position: relative;
-  bottom: 20px;
-}
-.header__label, .header__label::before, .header__label::after {
-  height: 2px;
-  width: 2em;
-  display: none;
-  background-color: black;
-  position: relative;
-}
 .header__label {
-  left: 3px;
-}
-.header__label::before {
-  bottom: 6px;
-  content: "";
-  height: 2px;
-  width: 3em;
-  background-color: black;
-  position: absolute;
-}
-.header__label::after {
-  top: 6px;
-  content: "";
-  height: 2px;
-  width: 1em;
-  background-color: black;
-  position: absolute;
+  display: none;
 }
 .header.wrapper {
   justify-content: space-between;

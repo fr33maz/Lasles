@@ -1,26 +1,58 @@
 @media screen and (max-width: 800px) {
-  nav ul {
-    pointer-events: none;
-    opacity: 0;
-    margin-left: 40px;
-  }
-  .header__list-element:not(:first-of-type) {
-    margin-left: 10px;
-  }
-  .header__checkbox:checked ~ nav ul {
-    opacity: 1;
-    transition: opacity 3s;
-    pointer-events: auto;
-  }
-  .main-section__figure img {
-    display: none;
-  }
-  a {
-    font-size: 14px;
-  }
   .header {
     display: grid;
     grid-template-columns: 10% 80% 10%;
+  }
+  .header__checkbox {
+    display: none;
+  }
+  .header__checkbox:checked ~ .header__label {
+    transform: rotate(-45deg);
+    width: 0;
+  }
+  .header__checkbox:checked ~ .header__label:before {
+    animation: burgerTop 0.5s linear forwards;
+  }
+  .header__checkbox:checked ~ .header__label:after {
+    animation: burgerBottom 0.5s linear forwards;
+  }
+  .header__checkbox:checked ~ .header__label {
+    left: 10px;
+    top: 13px;
+  }
+  .header__label span {
+    width: 3em;
+    height: 3em;
+    display: block;
+    position: relative;
+    bottom: 20px;
+  }
+  .header__label, .header__label::before, .header__label::after {
+    height: 2px;
+    width: 2em;
+    display: none;
+    background-color: black;
+    position: relative;
+    cursor: pointer;
+  }
+  .header__label {
+    left: 3px;
+  }
+  .header__label::before {
+    bottom: 6px;
+    content: "";
+    height: 2px;
+    width: 3em;
+    background-color: black;
+    position: absolute;
+  }
+  .header__label::after {
+    top: 6px;
+    content: "";
+    height: 2px;
+    width: 1em;
+    background-color: black;
+    position: absolute;
   }
   .header__login-btn {
     display: none;
@@ -35,5 +67,24 @@
   }
   .header__checkbox:checked ~ .header__logo {
     display: none;
+  }
+  .header__list-element:not(:first-of-type) {
+    margin-left: 10px;
+  }
+  .header__checkbox:checked ~ nav ul {
+    opacity: 1;
+    transition: opacity 3s;
+    pointer-events: auto;
+  }
+  nav ul {
+    pointer-events: none;
+    opacity: 0;
+    margin-left: 40px;
+  }
+  .main-section__figure img {
+    display: none;
+  }
+  a {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=media.css.map */

@@ -1,62 +1,13 @@
 @forward "globals";
-@forward 'animations';
+@forward "animations";
 .header {
     padding: 50px 0;
     &__checkbox {
         display: none;
     }
-    &__checkbox:checked ~ &__label {
-        transform: rotate(-45deg);
-        width: 0;
-    }
-    &__checkbox:checked ~ &__label:before {
-        animation: burgerTop 0.5s linear forwards;
-    }
-    &__checkbox:checked ~ &__label:after {
-        animation: burgerBottom 0.5s linear forwards;
-    }
-    &__checkbox:checked ~ &__label {
-        left: 10px;
-        top: 13px;
-    }
-    &__label span {
-        width: 3em;
-        height: 3em;
-        display: block;
-        position: relative;
-        bottom: 20px;
-    }
-    &__label,
-    &__label::before,
-    &__label::after {
-        height: 2px;
-        width: 2em;
-        display: none;
-        background-color: black;
-        position: relative;
-    }
     &__label {
-        left: 3px;
+        display: none;
     }
-    &__label::before {
-        bottom: 6px;
-        content: "";
-        height: 2px;
-        width: 3em;
-        // left: 2em;
-        background-color: black;
-        position: absolute;
-    }
-    &__label::after {
-        top: 6px;
-        content: "";
-        height: 2px;
-        width: 1em;
-        // left: 2em;
-        background-color: black;
-        position: absolute;
-    }
-
     &.wrapper {
         justify-content: space-between;
         align-items: center;
