@@ -1,10 +1,7 @@
 @media screen and (max-width: 800px) {
   .header {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-  }
-  .header__checkbox {
-    display: none;
+    grid-template-columns: 10% 90%;
   }
   .header__checkbox:checked ~ .header__label {
     transform: rotate(-45deg);
@@ -37,6 +34,7 @@
   }
   .header__label {
     left: 3px;
+    z-index: 100;
   }
   .header__label::before {
     bottom: 6px;
@@ -72,19 +70,47 @@
     margin-left: 10px;
   }
   .header__checkbox:checked ~ nav ul {
+    display: block;
     opacity: 1;
-    transition: opacity 3s;
+    transition: opacity 0.5s;
     pointer-events: auto;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 40px;
+    margin: 0;
+    background-color: white;
+    height: 100%;
+  }
+  .header__checkbox:checked ~ nav ul li {
+    margin-bottom: 40px;
+  }
+  .header__checkbox:checked ~ nav ul li:first-of-type {
+    margin-top: 45%;
+  }
+  .header__checkbox:checked ~ .header__span {
+    padding: 25px;
+  }
+  .header__checkbox:checked ~ .whatever {
+    padding-bottom: 40px;
+  }
+  .header__checkbox:checked ~ .width {
+    width: 100%;
   }
   nav ul {
     pointer-events: none;
     opacity: 0;
     margin-left: 40px;
+    position: absolute;
   }
   .main-section__figure img {
     display: none;
   }
   a {
-    font-size: 14px;
+    font-size: 35px;
+  }
+  .statistics {
+    display: none;
   }
 }/*# sourceMappingURL=media.css.map */
