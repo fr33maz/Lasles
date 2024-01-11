@@ -95,8 +95,8 @@
         &__checkbox:checked ~ &__span {
             padding: 25px;
         }
-        &__checkbox:checked ~ .whatever {
-            padding-bottom: 40px;
+        &__checkbox:checked ~ &__white-space {
+            padding-bottom: 60px;
         }
         &__checkbox:checked ~ .width {
             width: 100%;

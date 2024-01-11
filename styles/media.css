@@ -92,8 +92,8 @@
   .header__checkbox:checked ~ .header__span {
     padding: 25px;
   }
-  .header__checkbox:checked ~ .whatever {
-    padding-bottom: 40px;
+  .header__checkbox:checked ~ .header__white-space {
+    padding-bottom: 60px;
   }
   .header__checkbox:checked ~ .width {
     width: 100%;
