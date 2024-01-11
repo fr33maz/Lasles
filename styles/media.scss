@@ -1,0 +1,41 @@
+@media screen and (max-width: 800px) {
+    nav ul {
+        pointer-events: none;
+        opacity: 0;
+        margin-left: 40px;
+    }
+    .header__list-element:not(:first-of-type) {
+        margin-left: 10px;
+    }
+    .header__checkbox:checked ~ nav ul {
+        opacity: 1;
+        transition: opacity 3s;
+        pointer-events: auto;
+    }
+    .main-section__figure img {
+        display: none;
+    }
+    a {
+        font-size: 14px;
+    }
+    .header {
+        &__login-btn {
+            display: none;
+        }
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        &__logo {
+            grid-column: 2;
+            margin: auto;
+        }
+        &__label,
+        &__label::after,
+        &__label::before {
+            grid-column: 1;
+            display: unset;
+        }
+        &__checkbox:checked ~ &__logo {
+            display: none;
+        }
+    }
+}

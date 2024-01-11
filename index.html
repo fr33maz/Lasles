@@ -12,16 +12,19 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
 </head>
 
 <body>
     <header class="header wrapper">
+        <input id="checkbox" class="header__checkbox" type="checkbox">
+        <label for="checkbox" class="header__label"><span></span></label>
         <a class="header__logo flex-align-items" href="#">
             <img class="header__logo-img" src="public/assets/img/logo.svg" alt="logo">
             Lasles<span class="header__logo-bold-text">VPN</span>
         </a>
-        <nav>
+        <nav class="opacity">
             <ul class="header__list">
                 <li class="header__list-element"><a href="#">About</a></li>
                 <li class="header__list-element"><a href="#">Features</a></li>
