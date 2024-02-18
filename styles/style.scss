@@ -1,7 +1,12 @@
-@forward "globals";
-
+@import "globals";
 .header {
     padding: 50px 0;
+    &__checkbox {
+        display: none;
+    }
+    &__label {
+        display: none;
+    }
     &.wrapper {
         justify-content: space-between;
         align-items: center;
@@ -40,8 +45,8 @@
     &__login-btn-sign-up {
         margin-left: 30px;
         border-radius: 50px;
-        border: 2px solid #f53855;
-        color: #f53855;
+        border: 2px solid $btn-color;
+        color: $btn-color;
         padding: 13px 45px;
         font-weight: 500;
     }
@@ -60,7 +65,6 @@
     &__figure {
         &--second {
             justify-content: space-between;
-
         }
         &.wrapper {
             &:first-of-type {
@@ -104,10 +108,10 @@
     &__btn {
         font-weight: 500;
         line-height: 25px;
-        color: #fff;
+        color: $background-color;
         padding: 17px 77px;
         border-radius: 10px;
-        background-color: #f53838;
+        background-color: $btn-color;
     }
 
     &__list-element {
@@ -131,7 +135,6 @@
     justify-content: space-around;
     &__details {
         display: inherit;
-
     }
 }
 .details {
@@ -149,7 +152,7 @@
         margin-bottom: 5px;
         font-size: 25px;
         font-weight: 700;
-        color: #0b132a;
+        color: $list-title-color;
     }
 
     &__description {
@@ -157,7 +160,7 @@
     }
 }
 .plan-section {
-    background-color: #f8f8f8;
+    background-color: $secondary-color;
     text-align: center;
     padding: 80px 0;
     &__title {
@@ -173,7 +176,7 @@
         padding: 80px 0 50px;
         border-radius: 10px;
         border: 2px solid #ddd;
-        background: #fff;
+        background: $background-color;
         max-width: 330px;
         width: 100%;
         &:nth-of-type(2) {
@@ -188,7 +191,7 @@
         }
     }
     &__card--active {
-        border: 2px solid #f53838;
+        border: 2px solid $btn-color;
     }
     &__cards {
         justify-content: space-between;
@@ -214,10 +217,10 @@
 
     &__btn {
         font-weight: 600;
-        color: #f53838;
+        color: $btn-color;
         border-radius: 50px;
 
-        border: 2px solid #f53838;
+        border: 2px solid $btn-color;
         padding: 13px 63px;
     }
 
@@ -228,15 +231,15 @@
     &__price--not-free {
         &::after {
             content: " / mo";
-            color: #4f5665;
+            color: $price-color;
             font-size: 25px;
             font-weight: 400;
             line-height: 30px;
         }
     }
     &__btn--active {
-        color: #fff;
-        background-color: #f53838;
+        color: $background-color;
+        background-color: $btn-color;
     }
 
     &__avatar {
@@ -275,7 +278,7 @@
     }
 }
 .coverage-section {
-    background-color: #f8f8f8;
+    background-color: $secondary-color;
     padding: 57px 0 30px;
 
     &__title {
@@ -299,7 +302,7 @@
     }
 }
 .customer-section {
-    background-color: #f8f8f8;
+    background-color: $secondary-color;
     &__brands {
         align-items: center;
         justify-content: space-between;
@@ -346,7 +349,7 @@
     &__subscription {
         justify-content: space-between;
         padding: 58px 70px;
-        background-color: #fff;
+        background-color: $background-color;
         border-radius: 10px;
     }
 }
@@ -365,7 +368,7 @@
     }
 
     &__card--active {
-        border-color: #f53838;
+        border-color: $btn-color;
     }
 }
 .navigation {
@@ -391,7 +394,7 @@
 
     &__dot--active {
         padding: 7.5px 20px;
-        background-color: #f53838;
+        background-color: $btn-color;
         border-radius: 10px;
         display: inline-block;
     }
@@ -400,13 +403,13 @@
     &__left {
         padding: 16.5px;
         border-radius: 50%;
-        border: 2px solid #f53838;
+        border: 2px solid $btn-color;
     }
 
     &__right {
         padding: 18px;
         border-radius: 50%;
-        background-color: #f53838;
+        background-color: $btn-color;
         color: white;
         margin-left: 20px;
     }
@@ -419,17 +422,17 @@
 
     &__btn {
         border-radius: 10px;
-        background: #f53838;
+        background: $btn-color;
         padding: 17.5px 65px;
         align-self: center;
         font-weight: 500;
-        color: #fff;
+        color: $background-color;
         line-height: 25px;
     }
 }
 .footer {
     padding: 66px 0 100px;
-    background-color: #f8f8f8;
+    background-color: $secondary-color;
 
     &__description {
         width: 570px;
@@ -456,7 +459,7 @@
     }
     &__list-title {
         margin-bottom: 25px;
-        color: #0b132a;
+        color: $list-title-color;
         font-size: 18px;
         font-weight: 500;
     }
@@ -468,7 +471,7 @@
         height: 33px;
         width: 33px;
         padding: 7px;
-        background-color: #fff;
+        background-color: $background-color;
         border-radius: 40%;
     }
     &__twitter,
